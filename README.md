@@ -4,6 +4,8 @@ In one development team, we wanted to create a list of TODO comment that was wri
 
 This tool searches the comment, including the "TODO" from the package of the specified Go, is intended to be displayed on the standard output.
 
+[![https://gyazo.com/9ba6056b6fa83fbbc6ad987a0131f10f](https://i.gyazo.com/9ba6056b6fa83fbbc6ad987a0131f10f.png)](https://gyazo.com/9ba6056b6fa83fbbc6ad987a0131f10f)
+
 For example, you can search for TODO comments fmt package as follows.
 
 The source code for this tool, please refer to the main.go that have been attached.
