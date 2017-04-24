@@ -1,10 +1,13 @@
 # Premise
 
 In one development team, we wanted to create a list of TODO comment that was written in the source code, I made a command-line tool.
+
 This tool searches the comment, including the "TODO" from the package of the specified Go, is intended to be displayed on the standard output.
+
 For example, you can search for TODO comments fmt package as follows.
 
 The source code for this tool, please refer to the main.go that have been attached.
+
 It should be noted, main.go that is attached operates in Go1.7 more.
 
 # Task
@@ -18,12 +21,16 @@ In this team, we wanted the above tools and extended as follows.
 6. At least in the response, which contains the corresponding file path, row, the target comment
 
 So as to satisfy the above requirements, please correct the main.go.
+
 It should be noted that the format of the response and request of the API does not matter if I have freely design.
+
 It does not need to fit in a single package or a single file.
+
 There is no need to comply with the writing of the appended to have main.go, it does not matter if I have freely improved.
 
 In addition, we ask you to please answer the following in mind:.
-Premise that this tool has been maintained in the team
-It is actively improvement that can be improved in the existing code
-Attach a code that operation can be verified
-API documentation can be generated from the source code who created
+
+- Premise that this tool has been maintained in the team
+- It is actively improvement that can be improved in the existing code
+- Attach a code that operation can be verified
+- API documentation can be generated from the source code who created
