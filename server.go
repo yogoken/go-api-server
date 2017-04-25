@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	var port = flag.Int("p", 9000, "Host IP address")
+	var port = flag.Int("p", 9000, "Host PORT number")
 	flag.Parse()
 
 	router := gin.Default()
