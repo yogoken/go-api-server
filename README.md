@@ -15,12 +15,19 @@ It should be noted, main.go that is attached operates in Go1.7 more.
 # Task
 In this team, we wanted the above tools and extended as follows.
 
-1. I want to be able to change the search string (such as "TODO" or "FIXME")
-2. I want to work with Go1.6.2 more
-3. I want to also provide server mode
+```
+1. Make it possible to change the character string to search (such as "TODO" or "FIXME")
+2. Make it work with Go 1.6.2 or late
+3. Offer server mode
 4. If you start as a server mode, it operates as an API server
-5. Sending a HTTP request with a string to search for the package import path (such as fmt and net / http) to the server, come back the results in JSON format
-6. At least in the response, which contains the corresponding file path, row, the target comment
+5.
+To this server,
+if you send HTTP request with 1. import path (such as fmt and net/http) of a package and
+                              2. the character string to search
+you can get the results in JSON format
+
+6. At least in the response, which contains 1. the corresponding file path, 2. row, 3. the target comment
+```
 
 So as to satisfy the above requirements, please correct the main.go.
 
