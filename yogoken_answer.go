@@ -56,9 +56,12 @@ func importPkg(path, dir string) *build.Package {
 		panic(err)
 	}
 
-	if p.BinaryOnly {
-		return nil
-	}
+
+	// For go1.6.2
+	// Package struct does not have element BinaryOnly
+	//if p.BinaryOnly {
+	//	return nil
+	//}
 
 	if p.IsCommand() {
 		return nil
