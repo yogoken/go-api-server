@@ -23,7 +23,8 @@ func Search(context *gin.Context) {
 }
 ```
 
-When you open google chrome, and then input `http://localhost:9000/api/search/todo?p=fmt` on the url field.
+When you open google chrome, and then input `http://localhost:9000/api/search/todo?p=fmt` on the url field like below.
+[![https://gyazo.com/f1383488c94b60938b68b4630ace8709](https://i.gyazo.com/f1383488c94b60938b68b4630ace8709.png)](https://gyazo.com/f1383488c94b60938b68b4630ace8709)
 
 you can make sure that the http response is success
 [![https://gyazo.com/a9a438a1687264a098d5f9454060110f](https://i.gyazo.com/a9a438a1687264a098d5f9454060110f.png)](https://gyazo.com/a9a438a1687264a098d5f9454060110f)
