@@ -1,17 +1,17 @@
 package engine
 
 import (
-	"os"
 	"go/ast"
 	"go/parser"
 	"go/token"
-	"strings"
-	"path/filepath"
 	"golang_practice/util"
+	"os"
+	"path/filepath"
+	"strings"
 )
 
 type CommentStruct struct {
-	Row int
+	Row     int
 	Comment string
 }
 
@@ -23,7 +23,7 @@ type ResultStruct struct {
 func Search(packageName string, pattern string) []ResultStruct {
 
 	condition := strings.ToUpper(pattern)
-	
+
 	dir, err := os.Getwd()
 	if err != nil {
 		panic(err)
