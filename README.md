@@ -1,3 +1,67 @@
+# About
+This tool searches the comment, including the "TODO" from the specified package of Go language.
+
+## Send API Request
+```
+> go run server.go
+```
+
+## Usage
+```go
+package search
+
+import (
+	"github.com/gin-gonic/gin"
+	"golang_practice/constants"
+	"golang_practice/engine"
+)
+
+func Search(context *gin.Context) {
+	pattern := context.Param("pattern")
+	packageName := context.Query("p")
+	context.JSON(constants.HTTP_OK, engine.Search(packageName, pattern))
+}
+```
+
+When you open google chrome, and then input `http://localhost:9000/api/search/todo?p=fmt` on the url field like below.
+[![https://gyazo.com/b2a94b13b54070e046f88e6b5e58e6c7](https://i.gyazo.com/b2a94b13b54070e046f88e6b5e58e6c7.png)](https://gyazo.com/b2a94b13b54070e046f88e6b5e58e6c7)
+
+you can make sure that the http response is success
+[![https://gyazo.com/a9a438a1687264a098d5f9454060110f](https://i.gyazo.com/a9a438a1687264a098d5f9454060110f.png)](https://gyazo.com/a9a438a1687264a098d5f9454060110f)
+
+you could receive json format data like below
+
+## Result
+```go
+
+[
+  {
+    Filepath: "/Users/yogoken/.gvm/gos/go1.6.2/src/fmt/format.go",
+    Comments: [
+      {
+        Row: 332,
+        Comment: "TODO: Avoid buffer by pre-padding. "
+      }
+    ]
+  },
+  {
+    Filepath: "/Users/yogoken/.gvm/gos/go1.6.2/src/fmt/scan.go",
+    Comments: [
+      {
+        Row: 747,
+        Comment: "TODO: accept N and Ni independently? "
+      }
+    ]
+  }
+]
+```
+
+
+--------------------------------------------------------------------------------------------
+
+
+
+
 # Premise
 
 In one development team, we wanted to create a list of TODO comment that was written in the source code, I made a command-line tool.
@@ -23,7 +87,7 @@ In this team, we wanted the above tools and extended as follows.
 5.
 To this server,
 if you send HTTP request with 1. import path (such as fmt and net/http) of a package and
-                              2. the character string to search                       
+                              2. the character string to search                      
 you can get the results in JSON format
 
 6. At least in the response, which contains 1. the corresponding file path, 2. row, 3. the target comment
@@ -34,7 +98,7 @@ No.5 meant
 ```
 > go run main.go fmt "TODO"
 > POST/json HTTP/1.1........
-> 
+>
 {
     “path”: “/path/to/package/file.go”,
     “output”: [
