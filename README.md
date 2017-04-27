@@ -23,11 +23,13 @@ func Search(context *gin.Context) {
 }
 ```
 
-When you open google chrome, and then input `http://localhost:9000/api/search/todo?p=fmt` on the url field like below.
-[![https://gyazo.com/b2a94b13b54070e046f88e6b5e58e6c7](https://i.gyazo.com/b2a94b13b54070e046f88e6b5e58e6c7.png)](https://gyazo.com/b2a94b13b54070e046f88e6b5e58e6c7)
-
 you can make sure that the http response is success
 [![https://gyazo.com/a9a438a1687264a098d5f9454060110f](https://i.gyazo.com/a9a438a1687264a098d5f9454060110f.png)](https://gyazo.com/a9a438a1687264a098d5f9454060110f)
+
+When you open google chrome, and then input 
+
+***`http://localhost:9000/api/search/todo?p=fmt`*** on the url field like below.
+[![https://gyazo.com/b2a94b13b54070e046f88e6b5e58e6c7](https://i.gyazo.com/b2a94b13b54070e046f88e6b5e58e6c7.png)](https://gyazo.com/b2a94b13b54070e046f88e6b5e58e6c7)
 
 you could receive json format data like below
 
@@ -56,10 +58,12 @@ you could receive json format data like below
 ]
 ```
 
+## Other result
+
+[![https://gyazo.com/f8b8c6429a9b9b9f74726b7db8b1cfb2](https://i.gyazo.com/f8b8c6429a9b9b9f74726b7db8b1cfb2.gif)](https://gyazo.com/f8b8c6429a9b9b9f74726b7db8b1cfb2)
+
 
 --------------------------------------------------------------------------------------------
-
-
 
 
 # Premise
@@ -68,7 +72,11 @@ In one development team, we wanted to create a list of TODO comment that was wri
 
 This tool searches the comment, including the "TODO" from the package of the specified Go, is intended to be displayed on the standard output.
 
-[![https://gyazo.com/9ba6056b6fa83fbbc6ad987a0131f10f](https://i.gyazo.com/9ba6056b6fa83fbbc6ad987a0131f10f.png)](https://gyazo.com/9ba6056b6fa83fbbc6ad987a0131f10f)
+```
+$ go run main.go fmt
+/usr/local/go/src/fmt/scan.go:740:
+TODO: accept N and Ni independently?
+```
 
 For example, you can search for TODO comments fmt package as follows.
 
