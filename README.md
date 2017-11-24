@@ -1,5 +1,4 @@
-# About
-This tool searches the comment, including the "TODO" from the specified package of Go language.
+🔹 This tool searches the comment, including the "TODO" from the specified package of Go language.
 
 ## Send API Request
 ```
