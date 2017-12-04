@@ -1,6 +1,6 @@
 # About
 
-🔹 This tool searches the comment, including the "TODO" 
+🔹 This tool searches the comment, including the "TODO"
 
 ## Send API Request
 ```
@@ -60,5 +60,4 @@ you could receive json format data like below
 ```
 
 ## Other result
-
 [![https://gyazo.com/f8b8c6429a9b9b9f74726b7db8b1cfb2](https://i.gyazo.com/f8b8c6429a9b9b9f74726b7db8b1cfb2.gif)](https://gyazo.com/f8b8c6429a9b9b9f74726b7db8b1cfb2)
