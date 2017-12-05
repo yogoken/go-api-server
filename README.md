@@ -1,6 +1,6 @@
 # About
 
-🔹 This tool searches the comment, including the "TODO"
+🔹 This tool searches the comment, including the "TODO" by using Go
 
 ## Send API Request
 ```
